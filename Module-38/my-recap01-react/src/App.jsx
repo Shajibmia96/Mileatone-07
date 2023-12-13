@@ -11,7 +11,10 @@ function App() {
   return (
     <>
     
-        
+       <div>
+          <h3>React cor concept 2</h3>
+          <h3>This is react </h3>
+       </div>
        
     </>
   )
