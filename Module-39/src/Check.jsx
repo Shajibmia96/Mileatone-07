@@ -3,7 +3,7 @@ import { useState } from "react"
  export default function Check(){
 
       const [count , setCount] = useState(0)
-      console.log( count, setCount)
+    //   console.log( count, setCount)
 
         const add =() =>{
             const newCount = count +1;

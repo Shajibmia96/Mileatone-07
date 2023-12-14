@@ -4,6 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Counter from './Counter'
 import Check from './Check'
+import Team from './Team'
+import Users from './Users'
+
 
 function App() {
   
@@ -21,7 +24,10 @@ function App() {
 
   return (
     <>
+      <Users></Users>
 
+
+      <Team></Team>
        
         <h3>Now we explore react cor concept</h3>
         <button onClick={handlesClick}>Click me</button>
