@@ -6,6 +6,9 @@ import Counter from './Counter'
 import Check from './Check'
 import Team from './Team'
 import Users from './Users'
+import Bonthu from './bonthu'
+// import Friends from './Friends'
+
 
 
 function App() {
@@ -24,6 +27,7 @@ function App() {
 
   return (
     <>
+
       <Users></Users>
 
 
@@ -38,6 +42,10 @@ function App() {
         <button onClick={() =>addFive(10)}>Five</button>
          <Counter></Counter>
          <Check></Check>
+
+         <Bonthu></Bonthu>
+
+      
 
       
     </>
