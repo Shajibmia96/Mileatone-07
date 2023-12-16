@@ -7,6 +7,7 @@ import Check from './Check'
 import Team from './Team'
 import Users from './Users'
 import Bonthu from './bonthu'
+import Wit from './Wit'
 // import Friends from './Friends'
 
 
@@ -29,7 +30,8 @@ function App() {
     <>
 
       <Users></Users>
-
+    
+       <Wit></Wit>
 
       <Team></Team>
        
