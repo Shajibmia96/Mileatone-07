@@ -21,4 +21,25 @@ const programmer = {
 };
 
  const calculus = programmer?.Specification?.Sub?.Math?.calculus
- console.log(calculus)
+//  console.log(calculus)
+
+// ShotCut
+
+// const ten = 10;
+// if( !ten){
+//     console.log(ten)
+// }else{
+//     console.log("GO hell")
+// }
+
+const num1 = 12
+const numStr =   ""+num1 
+
+console.log(numStr)
+
+isActive = false;
+
+const showUsers = () => console.log("ShowUsers");
+const hiddenUsers =() => console.log("HiddenUsers");
+
+isActive ? showUsers() : hiddenUsers()
