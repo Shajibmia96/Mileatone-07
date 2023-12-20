@@ -14,7 +14,7 @@ const Country = ({country , handlesVisited}) => {
              setVisited(!visited)
          };
 
-         console.log(handlesVisited)
+        //  console.log(handlesVisited)
 
 
 
@@ -27,7 +27,7 @@ const Country = ({country , handlesVisited}) => {
               <p>Capital :{capital}</p>
               <p> Population :{population}</p>
               <p>Region :{region}</p>
-              <button> Mark country visited</button> <br /><br />
+              <button onClick={()=>handlesVisited(country)}> Mark country visited</button> <br /><br />
               <button onClick={handlesClick}>{visited ? "Visited" : "I wanna going a day"}</button><br />
               {visited ? "This country was visited by me" : "This country did'n visited"}
         </div>

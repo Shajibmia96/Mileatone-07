@@ -20,7 +20,13 @@ const Countries = () => {
        const handlesVisited =country =>{
         console.log("We find out visited country")
             console.log(country)
-       }
+            // visitedCountry.push(country)
+
+            const newVisitedCountries = [...visitedCountry , country];
+            setVisitedCountry(newVisitedCountries)
+       };
+
+       
 
     return (
 
@@ -29,9 +35,11 @@ const Countries = () => {
               <h4>Countries : {countries.length}</h4>
 
                 <div>
-                    <h3>Visited countries</h3>
+                    <h3>Visited countries : {visitedCountry.length}</h3>
                     <ul>
-
+                        {
+                            visitedCountry.map(country => <li key={country.cca3}>{country.name.common}</li>)
+                        }
                     </ul>
                 </div>
               <div className="countries-container">
