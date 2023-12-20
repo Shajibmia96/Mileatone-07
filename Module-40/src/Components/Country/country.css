@@ -9,3 +9,8 @@
     padding: 10px;
      color: white;
 }
+
+.visited{
+    background: bisque;
+    color: black;
+}
