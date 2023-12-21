@@ -52,7 +52,7 @@ const Countries = () => {
                         }
                     </ul>
 
-                    <h3>Visited Flags : {visitedFlags.length} </h3>
+                    <h3>Visited Flags in this world : {visitedFlags.length} </h3>
                       
                     
 
