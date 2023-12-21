@@ -24,8 +24,8 @@ const Country = ({country , handlesVisited ,  handlesVisitedFlags}) => {
               <p style={{color : visited ? "purple" : "orange", fontSize: visited ? "40px" : "20px"}}>Name : {name?.common}</p>
               {/* <p>Alt : {flags?.alt}</p> */}
               <img src={flags?.png} alt="" />
-              <p>Area :{area}</p> 
-              <p>Capital :{capital}</p>
+              <p>Area in bd:{area}</p> 
+              <p>Capital in bd :{capital}</p>
               <p> Population :{population}</p>
               <p>Region :{region}</p>
               <button onClick={()=>handlesVisited(country)}> Mark country visited</button> <br /><br />
