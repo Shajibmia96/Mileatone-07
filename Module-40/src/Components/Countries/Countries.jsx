@@ -74,6 +74,7 @@ const Countries = () => {
                     country={country}></Country>)
                 }
               </div>
+              
         </div>
     );
 };
