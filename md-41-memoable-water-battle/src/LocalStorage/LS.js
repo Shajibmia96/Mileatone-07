@@ -5,6 +5,11 @@ const getLSData = () =>{
         return JSON.parse(LSString)
      }
      return []
+};
+
+const addLSData = cart=>{
+    const cartStringified = JSON.stringify(cart)
+    localStorage.setItem("cart" , cartStringified)
 }
 
 const savedLSData = id => {
@@ -13,9 +18,5 @@ const savedLSData = id => {
          addLSData(cart)
         
 }
- export {savedLSData}
+ export {savedLSData , getLSData}
 
-const addLSData = cart=>{
-     const cartStringified = JSON.stringify(cart)
-     localStorage.setItem("cart" , cartStringified)
-}

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Battle from "./Battle";
 import './battle.css'
+import { getLSData, savedLSData } from "../../LocalStorage/LS";
 
 
 
@@ -20,6 +21,16 @@ const Battles = () => {
           
     } ,[])
 
+    // load data from local storages
+
+    useEffect( () =>{
+        console.log(battles.length)
+      if(battles.length > 0){
+        const loadData = getLSData()
+        console.log(loadData)
+      }
+    } ,[battles])
+
 
     // EventHandler 
 
@@ -27,6 +38,7 @@ const Battles = () => {
          console.log(bottle)
          const newCart = [...cart , bottle]
          setCart(newCart)
+         savedLSData(bottle.id)
     }
 
             // console.log(battles)
