@@ -1,20 +1,21 @@
-const getLSData =() =>{
-    const storedCardStringed = localStorage.getItem("cart")
-    if(storedCardStringed){
-        return JSON.parse(storedCardStringed)
-    }return []
-};
+const getLSData = () =>{
 
-
-const saveLSData =cart =>{
-    const cardStringified = JSON.stringify(cart)
-    localStorage.setItem("cart" , cardStringified)
+     const LSString = localStorage.getItem("cart")
+     if(LSString){
+        return JSON.parse(LSString)
+     }
+     return []
 }
 
-const setLSData = id =>{
-    const cart = getLSData()
-    cart.push(id)
-    saveLSData(cart)
+const savedLSData = id => {
+         const cart = getLSData()
+         cart.push(id)
+         addLSData(cart)
+        
 }
+ export {savedLSData}
 
-export {setLSData}
+const addLSData = cart=>{
+     const cartStringified = JSON.stringify(cart)
+     localStorage.setItem("cart" , cartStringified)
+}
