@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 // import './Battles/battle.css'
 import './battle.css'
 const Battle = ({bottle , handleBottle}) => {
@@ -16,4 +16,10 @@ const Battle = ({bottle , handleBottle}) => {
     );
 };
 
+ Battle.propTypes = {
+    bottle:PropTypes.object.isRequired,
+   handleBottle:PropTypes.func.isRequired,
+    
+ }
+    
 export default Battle;
