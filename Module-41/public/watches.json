@@ -1,0 +1,6 @@
+ [
+    { "id": 1, "name": "Classic Watch", "price": 99.99 },
+    { "id": 2, "name": "Sports Watch", "price": 149.99 },
+    { "id": 3, "name": "Digital Watch", "price": 79.99 },
+    { "id": 4, "name": "Luxury Watch", "price": 299.99 }
+  ]
