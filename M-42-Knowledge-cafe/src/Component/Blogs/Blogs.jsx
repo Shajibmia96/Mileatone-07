@@ -1,8 +1,9 @@
 
 import { useEffect } from "react";
 import { useState } from "react";
+import Blog from "./Blog";
 
-const Blog = () => {
+const Blogs = () => {
 
       const [blogs , setBlogs]=useState([])
 
@@ -15,8 +16,13 @@ const Blog = () => {
     return (
         <div className="md:w-2/3">
               <h1 className="text-4xl">Blogs : {blogs.length}</h1>
+              {
+                blogs.map(blog => <Blog 
+                  key={blog.id} 
+                  blog={blog}></Blog>)
+              }
         </div>
     );
 };
 
-export default Blog;
+export default Blogs;
