@@ -1,0 +1,10 @@
+.title{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: aqua;
+
+}
+.title:hover{
+    transition-duration: 2s;
+    color: azure;
+}
