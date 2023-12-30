@@ -1,5 +1,5 @@
 // import React from 'react';
-
+import PropTypes from "prop-types"
 const Example = ({children}) => {
     return (
         <div>
@@ -9,4 +9,7 @@ const Example = ({children}) => {
     );
 };
 
+Example.propTypes ={
+    children:PropTypes.array
+}
 export default Example;

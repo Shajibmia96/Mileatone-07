@@ -4,6 +4,7 @@ import Cart from "./Component/Cart";
 import Example from "./Component/Example";
 import UseState from "./Component/UseState/UseState";
 import FetchData from "./Component/FetchData";
+import PropsDrilling from "./Component/PropsDrilling/PropsDrilling";
 
  
 
@@ -70,6 +71,8 @@ function App() {
 
            <UseState handleAdd={handleAdd} add={add} handleRemoved={handleRemoved}></UseState>
            <FetchData></FetchData>
+
+           <PropsDrilling></PropsDrilling>
     </div>
   );
 }
