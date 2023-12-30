@@ -1,5 +1,8 @@
+import { useState } from "react";
 import "./App.css";
 import Cart from "./Component/Cart";
+import Example from "./Component/Example";
+import UseState from "./Component/UseState/UseState";
 
  
 
@@ -27,6 +30,25 @@ function App() {
     }
   ]
 
+  const names = ["Shajib" , "Sarif" , "Sohan" , "Golap Hossain" ,"Mehedi hasan"]
+ // Use State for add 
+
+   const [add , setAdd] = useState("Shajib")
+
+// 
+
+  //  handle add 
+
+   const handleAdd =() =>{
+      console.log("add click")
+     
+      setAdd("Sabuj")
+   }
+
+   const handleRemoved =() =>{
+     console.log("removed is clicked")
+     setAdd("Shajib")
+   }
   return (
     <div className="container mx-auto">
         <h1 className="text-3xl text-center">Wellcome to my web pase</h1>
@@ -37,6 +59,15 @@ function App() {
           }
              
            </div>
+           <Example>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, rem?</p>
+           </Example>
+
+           {
+            names.map((item) =>( <h1>{item}</h1>))
+           }
+
+           <UseState handleAdd={handleAdd} add={add} handleRemoved={handleRemoved}></UseState>
     </div>
   );
 }

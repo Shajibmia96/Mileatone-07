@@ -2,6 +2,7 @@
 import image from "../../public/images/react.png";
 // import Views from "./Views.JSX";
 import "./title.css"
+import PropTypes from 'prop-types';
 const Cart = (props) => {
   const {name, age } = props;
 
@@ -15,12 +16,15 @@ const Cart = (props) => {
         <figure>
           <img src={image} alt="" />
         </figure>
-        <p>
-          age: <span style={{ color: "red", font: "30px" }}>{age}</span>
-        </p>
+        <p className="text-3xl text-blue-200">age: {age} </p>
       </div>
     </div>
   );
 };
+
+Cart.propTypes ={
+  name:PropTypes.object,
+  age:PropTypes.object
+}
 
 export default Cart;
