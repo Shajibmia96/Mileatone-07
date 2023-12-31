@@ -10,18 +10,13 @@ const Home = () => {
     // for data load
     const [data ,setData] = useState([])
 //   Handles Clicked
-const [select ,setSelect] = useState([])
+const [selectActors ,setSelectActors] = useState([])
 // console.log(select)
 
 // HandleSelect function
 
  const handleSelect =(card) =>{
-   //  setSelect(card)
-   // console.log(card)
-    const  newSelected = [...select , card]
-   //  console.log(newSelected)
-      setSelect(newSelected)
-      
+   setSelectActors([...selectActors , card])    
  }
 
 //  console.log(select.name)
@@ -49,12 +44,8 @@ const [select ,setSelect] = useState([])
               </div>
               {/* Card */}
               <div className="card">
-                {
-                  select.map(selected => <ShowCard
-                  selected={selected}
-                  key={selected.id}
-                  ></ShowCard>)
-                }
+                <ShowCard selectActors={selectActors}></ShowCard>
+                  
               </div>
               </div>
         </div>
