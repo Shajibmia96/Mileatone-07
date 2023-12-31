@@ -3,18 +3,29 @@ import { useState } from "react";
 import "./Home.css"
 import { useEffect } from "react";
 import Card from "../Card/Card";
+
+import ShowCard from "../ShowCard";
+
 const Home = () => {
     // for data load
     const [data ,setData] = useState([])
 //   Handles Clicked
-const [click ,setClick] = useState([])
+const [select ,setSelect] = useState([])
+// console.log(select)
 
+// HandleSelect function
 
-// HandleClick function
-
- const handleClick =(card) =>{
-    console.log(card.name)
+ const handleSelect =(card) =>{
+   //  setSelect(card)
+   // console.log(card)
+    const  newSelected = [...select , card]
+   //  console.log(newSelected)
+      setSelect(newSelected)
+      
  }
+
+//  console.log(select.name)
+//  useEffect
     useEffect(() =>{
            const fetchData = async() =>{
              const res = await fetch("data.json")
@@ -32,13 +43,18 @@ const [click ,setClick] = useState([])
                     data.map((card ) => <Card
                      card={card}
                      key={card.id}
-                     handleClick={handleClick}
+                     handleSelect={handleSelect}
                     ></Card>)
                  }
               </div>
               {/* Card */}
               <div className="card">
-                <h1>This is card</h1>
+                {
+                  select.map(selected => <ShowCard
+                  selected={selected}
+                  key={selected.id}
+                  ></ShowCard>)
+                }
               </div>
               </div>
         </div>

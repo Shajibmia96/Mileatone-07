@@ -1,7 +1,7 @@
 import './Card.css'
 
-const Card = ({card , handleClick}) => {
-    console.log(card)
+const Card = ({card , handleSelect}) => {
+    // console.log(card)
     const {name,image,salary,country ,role
     } = card
     return (
@@ -17,7 +17,7 @@ const Card = ({card , handleClick}) => {
                         <p>{role}</p>
                     </div>
                     
-                    <button onClick={()=>handleClick(card)} className="card-btn">Selected</button>
+                    <button onClick={()=>handleSelect(card)} className="card-btn">Selected</button>
                     
               </div>
         </div>
