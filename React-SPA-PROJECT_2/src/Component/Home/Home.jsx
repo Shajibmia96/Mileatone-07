@@ -16,7 +16,13 @@ const [selectActors ,setSelectActors] = useState([])
 // HandleSelect function
 
  const handleSelect =(card) =>{
-   setSelectActors([...selectActors , card])    
+     const Exited = selectActors.find(item => item.id == card.id)
+     if(Exited){
+       return alert("it already added")
+     }else{
+      setSelectActors([...selectActors , card])
+     }
+       
  }
 
 //  console.log(select.name)
