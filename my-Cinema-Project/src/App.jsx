@@ -4,8 +4,11 @@ import Home from "./Component/Home/Home";
 const App = () => {
   return (
     <>
-          <Home></Home> 
-          <Cart></Cart> 
+         <div className="App-container">
+            <Home></Home>
+            <Cart></Cart>
+         </div>
+         
     </>
   );
 };

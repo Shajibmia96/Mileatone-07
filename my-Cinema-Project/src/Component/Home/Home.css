@@ -1,0 +1,42 @@
+.card{
+    width: 250px;
+    height: 310px;
+    border: 2px solid darkgray;
+    border-radius: 20px;
+    text-align: center;
+}
+.photo{
+    width: 80px;
+    border-radius: 50%;
+}
+.info{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cart-btn{
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    
+}
+
+.Home-container{
+    display: flex;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 100px;
+    gap: 25px;
+}
+.card-container{
+    width: 1000px;
+}
+.cart-container{
+    width: 500px;
+    border: 1px solid rebeccapurple;
+    height: auto;
+    text-align: center;
+}
+
+
