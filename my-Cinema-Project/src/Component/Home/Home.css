@@ -8,6 +8,7 @@
 .photo{
     width: 80px;
     border-radius: 50%;
+    margin-top: 5px;
 }
 .info{
     display: flex;
@@ -31,6 +32,9 @@
 }
 .card-container{
     width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .cart-container{
     width: 500px;
