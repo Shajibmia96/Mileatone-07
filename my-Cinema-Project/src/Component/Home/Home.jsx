@@ -9,6 +9,10 @@ const Home = () => {
     // UseState
      const [Actors , setActors] =useState([])
      const [likeActors , setLikeActor] = useState([])
+     const [totalSalary , seTotalSalary] = useState(0)
+     const [totalCost , setTotalCost] = useState(0)
+     const [remaining , setRemaining] = useState(0)
+     console.log(totalSalary)
     // useEffect and fetch data 
        useEffect(()=>{
             fetch('/public/data.json')
@@ -22,13 +26,24 @@ const Home = () => {
        
     //    Selected actor function 
     const selectActor =(actor) =>{
+
+        let count =actor.salary
+        console.log(count)
         // console.log(actor)
-      const isExist =  likeActors.find(item => item.id == actor.id)
+      const isExist =  likeActors.find((item) => item.id == actor.id)
       if(isExist){
          return alert("It's already books")
-         
+
       }else{
         setLikeActor([...likeActors , actor])
+        seTotalSalary(totalSalary + actor.salary)
+        likeActors.forEach(item=> {
+           count = count +item.salary
+           
+        })
+        setTotalCost(count)
+         const TotalRemaining = 20000-count
+         setRemaining(TotalRemaining)
       }
         
         
@@ -56,8 +71,11 @@ const Home = () => {
                  } 
                 </div>
                 <div className="cart-container">
-                  <h2>total Actor : {likeActors.length}</h2>
-                   <h3>Total cost : </h3>
+   
+                  <h3>total Actor : {likeActors.length}</h3>
+                    <h3>Total Remaining budget : {remaining}</h3>
+                   <h3>Total cost : {totalCost}</h3>
+                   <h3>Total salary :{totalSalary}</h3>
                   {
                     likeActors.map(actor =>(
                         <li key={actor.id}>{actor.name}</li>
