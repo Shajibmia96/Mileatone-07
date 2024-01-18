@@ -1,10 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import Header from './component/Header/Header';
+import Blogs from './component/Blogs/Blogs';
 
 const App = () => {
   return (
     <div>
-       <h1 className='text-5xl text-red-200'>Knowledge cafe</h1>
+           <Header></Header>
+           <Blogs></Blogs>
     </div>
   );
 };
