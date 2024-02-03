@@ -15,7 +15,9 @@ const Blogs = () => {
    
     return (
         <div>
-            
+            {
+                blogs.map(blog => console.log(blog))
+            }
         </div>
     );
 };
