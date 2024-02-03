@@ -9,7 +9,7 @@ function App() {
     <>
       <div className='container mx-auto'>
       <Header></Header>
-        <div className='md:flex pt-4'>
+        <div className='md:flex pt-4 gap-10'>
         <Blogs></Blogs>
         <BookMarks></BookMarks>
         </div>
