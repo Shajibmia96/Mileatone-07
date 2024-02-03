@@ -1,12 +1,15 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import PropTypes from 'prop-types';
-const Blog = ({blog}) => {
+import { FaBookmark } from "react-icons/fa6";
+
+
+const Blog = ({blog , handlesBooksMark}) => {
     console.log(blog)
     const {cover_img , title , reading_time,post_date,hash_tag,author_name,author_img } = blog ;
     return (
-        <div className='md:pt-4'>
-             <div className='space-y-5 mb-5'>
+        <div className='md:pt-5 mb-10'>
+             <div className='space-y-3 mb-5'>
                   <img className='rounded-md' src={cover_img} alt="" />
                   <div className='flex justify-between items-center'>
                     {/* author-info */}
@@ -22,9 +25,10 @@ const Blog = ({blog}) => {
                          </div>
                      </div>
                      {/* reading time */}
-                     <div className='pr-3'>
+                     <div className='pr-3 flex gap-3'>
                         <p>{reading_time} min read</p>
-                        <button></button>
+                        <button onClick={handlesBooksMark}><FaBookmark>
+                            </FaBookmark></button>
                      </div>
                   </div>
                   {/* title */}
@@ -36,7 +40,7 @@ const Blog = ({blog}) => {
                     }
                   </p>
 
-                  <button className='text-2xl font-semibold text-blue-400'>Mark as read</button>
+                  <button className='text-2xl font-semibold text-blue-600'>Mark as read</button>
              </div>
         </div>
     );
